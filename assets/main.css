@@ -1,0 +1,47 @@
+body {
+    padding: 100px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 21px;
+    min-width: 500px;
+}
+
+h1 {
+    display: inline;
+    font-size: 67px;
+    margin-left: 20px;
+    position: relative;
+    bottom: 12px;
+}
+
+a.dist {
+    color: #0000ee;
+}
+
+a.dist:hover {
+    color: #000;
+}
+
+.secondary {
+    color: #bbb;
+}
+
+a.secondary:hover {
+    color: #000;
+}
+
+ul {
+    margin-top: 5px;
+}
+
+p {
+    margin: 20px 0 0 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    border-top: 1px dashed #bbb;
+    color: #bbb;
+    width: 500px;
+    padding-top: 10px;
+}
