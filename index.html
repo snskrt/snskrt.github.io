@@ -22,13 +22,14 @@
     </ul>
 
     <div class="download">
-        <a href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.1/snskrt-desktop-dict-1.0.1.dmg">Download for Mac</a>
-        <a href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.1/snskrt-desktop-dict-setup-1.0.1.exe">Download for Windows</a>
+        <a class="js-download" data-download="mac" href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.1/snskrt-desktop-dict-1.0.1.dmg">Download for Mac</a>
+        <a class="js-download" data-download="win" href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.1/snskrt-desktop-dict-setup-1.0.1.exe">Download for Windows</a>
+
         <p class="secondary">Your computer may try to block this app since it is not signed. Allow it through windows smartscreen, or on mac, <nobr>right-click > open</nobr>.</p>
     </div>
 
     <div class="screens">
-        <div class="next" onclick="slider.next();">&rarr;</div>
+        <div class="next" id="sliderNext">&rarr;</div>
         <div class="images" data-simple-slider>
             <img src="assets/screens/i1.png">
             <img src="assets/screens/i2.png">
@@ -36,11 +37,6 @@
             <img src="assets/screens/i4.png">
         </div>
     </div>
-    <script>
-        var slider = simpleslider.getSlider({
-            paused: true
-        });
-    </script>
 
     <footer>
         Hosted with &#10084; on <a class="secondary" href="https://github.com/snskrt/desktop-dict" target="_blank">GitHub</a>
@@ -56,5 +52,17 @@
 
         ga('create', 'UA-97081361-1', 'auto');
         ga('send', 'pageview');
+
+        (function() {
+            var slider = simpleslider.getSlider({ paused: true });
+            document.getElementById('sliderNext').onclick = slider.next;
+
+            var downloadLinks = document.getElementsByClassName('js-download');
+            for (var i = 0; i < downloadLinks.length; i++) {
+                downloadLinks[i].onclick = function(e) {
+                    ga('send', 'event', 'Dist', 'download', e.target.getAttribute('data-download'));
+                };
+            }
+        })();
     </script>
 </body>
