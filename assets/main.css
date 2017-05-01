@@ -2,7 +2,7 @@ body {
     padding: 100px;
     font-family: 'Inconsolata', monospace;
     font-size: 21px;
-    min-width: 500px;
+    width: 650px;
 }
 
 h1 {
@@ -38,10 +38,30 @@ p {
 }
 
 footer {
-    position: absolute;
-    bottom: 20px;
-    border-top: 1px dashed #bbb;
     color: #bbb;
-    width: 500px;
-    padding-top: 10px;
+    width: 600px;
+    margin-top: 50px;
+}
+
+.images {
+    width: 600px;
+    height: 772px;
+    margin-top: 50px;
+    margin-left: -10px;
+    border: 10px solid black;
+}
+
+.images img {
+    width: 100%;
+}
+
+.screens {
+    position: relative;
+}
+
+.next {
+    position: absolute;
+    left: 630px;
+    font-size: 60px;
+    cursor: pointer;
 }

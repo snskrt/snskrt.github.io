@@ -5,6 +5,7 @@
     <title>Sankrit-English Dictionary</title>
     <link rel="stylesheet" href="assets/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <script src="assets/simpleslider.min.js"></script>
 </head>
 <body>
     <img src="assets/icon.svg" alt="SNSKRT">
@@ -12,25 +13,31 @@
     <p>Sanskrit-English dictionary app: Monier Williams and Apte</p>
     <p>Download for:</p>
     <ul>
-        <li><a class="dist" href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.0/snskrt-desktop-dict-1.0.0.dmg">MacOS</a>
-            <a id="mac-howto" class="secondary" href="javascript:void(0)">(how to open)</a>
-            <span id="howto-expand" class="secondary" style="display: none;">(copy to the Applications folder, right-click and choose "Open")</span>
-        </li>
-        <li><a class="dist" href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.0/snskrt-desktop-dict-Setup-1.0.0.exe">Windows</a></li>
+        <li><a class="dist" href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.0/snskrt-desktop-dict-1.0.0.dmg">MacOS</a></li>
+        <li><a class="dist" href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.0/snskrt-desktop-dict-setup-1.0.0.exe">Windows</a></li>
     </ul>
+    <p class="secondary">Your computer may try to block this app since it is not signed. Allow it through windows smartscreen, or on mac, <nobr>right-click > open</nobr>.</p>
+
+    <div class="screens">
+        <div class="next" onclick="slider.next();">&rarr;</div>
+        <div class="images" data-simple-slider>
+            <img src="assets/screens/i1.png">
+            <img src="assets/screens/i2.png">
+            <img src="assets/screens/i3.png">
+            <img src="assets/screens/i4.png">
+        </div>
+    </div>
+    <script>
+        var slider = simpleslider.getSlider({
+            paused: true
+        });
+    </script>
 
     <footer>
         Hosted with &#10084; on <a class="secondary" href="https://github.com/snskrt/desktop-dict" target="_blank">GitHub</a>
         <br>
         &copy;&nbsp;<a class="secondary" href="mailto:mail@snskrt.xyz">Dan Kocherga</a>
     </footer>
-
-    <script>
-        document.getElementById('mac-howto').onclick = function() {
-            document.getElementById('mac-howto').style.display = 'none';
-            document.getElementById('howto-expand').style.display = 'inline';
-        }
-    </script>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
