@@ -13,14 +13,6 @@ h1 {
     bottom: 12px;
 }
 
-a.dist {
-    color: #0000ee;
-}
-
-a.dist:hover {
-    color: #000;
-}
-
 .secondary {
     color: #bbb;
 }
@@ -48,7 +40,7 @@ footer {
     height: 772px;
     margin-top: 50px;
     margin-left: -10px;
-    border: 10px solid black;
+    border: 10px solid #000;
 }
 
 .images img {
@@ -64,4 +56,23 @@ footer {
     left: 630px;
     font-size: 60px;
     cursor: pointer;
+}
+
+.download {
+    margin-top: 50px;
+}
+
+.download a {
+    margin-right: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 5px solid #fff;
+}
+
+.download a:hover {
+    background-color: #fff;
+    color: #000;
+    border: 5px solid #000;
 }
