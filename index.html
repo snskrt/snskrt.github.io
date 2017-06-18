@@ -29,7 +29,13 @@
     </div>
 
     <div class="screens">
-        <div class="next" id="sliderNext">&rarr;</div>
+        Screenshots:
+        <div class="previews" id="screens-previews">
+            <img src="assets/screens/i1.png">
+            <img src="assets/screens/i2.png">
+            <img src="assets/screens/i3.png">
+            <img src="assets/screens/i4.png">
+        </div>
         <div class="images" data-simple-slider>
             <img src="assets/screens/i1.png">
             <img src="assets/screens/i2.png">
@@ -56,10 +62,22 @@
     </script>
 
     <script>
+        // Screenshots
         (function() {
             var slider = simpleslider.getSlider({ paused: true });
-            document.getElementById('sliderNext').onclick = slider.next;
 
+            var previews = document.getElementById('screens-previews').getElementsByTagName('img');
+            for (var i = 0; i < previews.length; i++) {
+                previews[i].onclick = function(index) {
+                    if (slider.currentIndex() !== index) {
+                        slider.change(index);
+                    }
+                }.bind(previews[i], i)
+            }
+        })();
+
+        // Analytics events
+        (function() {
             var downloadLinks = document.getElementsByClassName('js-download');
             for (var i = 0; i < downloadLinks.length; i++) {
                 downloadLinks[i].onclick = function(e) {
