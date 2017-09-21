@@ -38,7 +38,7 @@ footer {
 .images {
     width: 600px;
     height: 772px;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: -10px;
     border: 10px solid #000;
 }
@@ -48,6 +48,7 @@ footer {
 }
 
 .screens {
+    border-top: 1px solid #000;
     margin-top: 30px;
 }
 
@@ -78,4 +79,27 @@ footer {
     background-color: #fff;
     color: #000;
     border: 5px solid #000;
+}
+
+.blog-link {
+    color: #bbb;
+    top: 220px;
+    left: 800px;
+    position: absolute;
+}
+
+.blog-link a {
+    color: #bbb;
+}
+
+.blog-link a:hover {
+    color: #000;
+}
+
+.screen-label {
+    position: absolute;
+    padding: 10px;
+    color: #fff;
+    margin-top: 15px;
+    background-color: #000;
 }

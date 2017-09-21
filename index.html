@@ -11,7 +11,7 @@
 <body>
     <img src="assets/icon.svg" alt="SNSKRT">
     <h1>SNSKRT</h1>
-    <p>Sanskrit-English dictionary app.</p>
+    <h2>Sanskrit-English Dictionary App</h2>
     <p>Features:</p>
     <ul>
         <li>Monier Williams dictionary (1899)</li>
@@ -21,6 +21,11 @@
         <li>Abbreviations and source authorities hints</li>
     </ul>
 
+    <div class="blog-link">
+        Curious what's this all about?
+        <br>
+        Follow <a target="_blank" href="http://medium.com/snskrt">translations blog &rarr;</a>
+    </div>
     <div class="download">
         <a class="js-download" data-download="mac" href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.1/snskrt-desktop-dict-1.0.1.dmg">Download for Mac</a>
         <a class="js-download" data-download="win" href="https://github.com/snskrt/desktop-dict/releases/download/v1.0.1/snskrt-desktop-dict-setup-1.0.1.exe">Download for Windows</a>
@@ -29,13 +34,14 @@
     </div>
 
     <div class="screens">
-        Screenshots:
+        <h2>Screenshots</h2>
         <div class="previews" id="screens-previews">
             <img src="assets/screens/previews/i1.png">
             <img src="assets/screens/previews/i2.png">
             <img src="assets/screens/previews/i3.png">
             <img src="assets/screens/previews/i4.png">
         </div>
+        <div class="screen-label" id="preview-labels">Moniew-Williams translation of "bāhu" word</div>
         <div class="images" data-simple-slider>
             <img src="assets/screens/i1.png">
             <img src="assets/screens/i2.png">
@@ -71,9 +77,22 @@
                 previews[i].onclick = function(index) {
                     if (slider.currentIndex() !== index) {
                         slider.change(index);
+                        changeLabel(index);
                     }
                 }.bind(previews[i], i)
             }
+
+            function changeLabel(index) {
+                var labels = [
+                    'Moniew-Williams translation of "bāhu" word',
+                    'Apte translation of "sāman" word',
+                    'Source authority highlight',
+                    'Dictionary abbreviation highlight'
+                ];
+                var labelElm = document.getElementById('preview-labels');
+                labelElm.innerHTML = labels[index];
+            }
+            changeLabel(0);
         })();
 
         // Analytics events
